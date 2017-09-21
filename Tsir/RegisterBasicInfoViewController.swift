@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  RegisterBasicInfoViewController.swift
 //  Tsir
 //
 //  Created by Trevor Bullock on 9/18/17.
@@ -8,8 +8,15 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterBasicInfoViewController: UIViewController {
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +38,10 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Private Methods
+    private func updateSubmitButtonState() {
+        
+    }
 
 }

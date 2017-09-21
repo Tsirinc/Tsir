@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1ACAE71F7317BA0055B7D3 /* RegisterBiometricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1ACAE61F7317BA0055B7D3 /* RegisterBiometricsViewController.swift */; };
+		7A1ACAE91F7318080055B7D3 /* RegisterSecurityQuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1ACAE81F7318080055B7D3 /* RegisterSecurityQuesViewController.swift */; };
 		7A44C5861F6DB1A000C3F49F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C5851F6DB1A000C3F49F /* AppDelegate.swift */; };
 		7A44C5881F6DB1A000C3F49F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C5871F6DB1A000C3F49F /* LoginViewController.swift */; };
 		7A44C58B1F6DB1A000C3F49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A44C5891F6DB1A000C3F49F /* Main.storyboard */; };
@@ -14,7 +16,7 @@
 		7A44C5901F6DB1A000C3F49F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A44C58E1F6DB1A000C3F49F /* LaunchScreen.storyboard */; };
 		7A44C59B1F6DB1A000C3F49F /* TsirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C59A1F6DB1A000C3F49F /* TsirTests.swift */; };
 		7A44C5A61F6DB1A000C3F49F /* TsirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C5A51F6DB1A000C3F49F /* TsirUITests.swift */; };
-		7A4E349A1F6FB258007C4754 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E34991F6FB258007C4754 /* RegisterViewController.swift */; };
+		7A4E349A1F6FB258007C4754 /* RegisterBasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E34991F6FB258007C4754 /* RegisterBasicInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1ACAE61F7317BA0055B7D3 /* RegisterBiometricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBiometricsViewController.swift; sourceTree = "<group>"; };
+		7A1ACAE81F7318080055B7D3 /* RegisterSecurityQuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterSecurityQuesViewController.swift; sourceTree = "<group>"; };
 		7A44C5821F6DB1A000C3F49F /* Tsir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44C5851F6DB1A000C3F49F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A44C5871F6DB1A000C3F49F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +52,7 @@
 		7A44C5A11F6DB1A000C3F49F /* TsirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TsirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44C5A51F6DB1A000C3F49F /* TsirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsirUITests.swift; sourceTree = "<group>"; };
 		7A44C5A71F6DB1A000C3F49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A4E34991F6FB258007C4754 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7A4E34991F6FB258007C4754 /* RegisterBasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBasicInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				7A44C5851F6DB1A000C3F49F /* AppDelegate.swift */,
 				7A44C5871F6DB1A000C3F49F /* LoginViewController.swift */,
-				7A4E34991F6FB258007C4754 /* RegisterViewController.swift */,
+				7A4E34991F6FB258007C4754 /* RegisterBasicInfoViewController.swift */,
+				7A1ACAE61F7317BA0055B7D3 /* RegisterBiometricsViewController.swift */,
+				7A1ACAE81F7318080055B7D3 /* RegisterSecurityQuesViewController.swift */,
 				7A44C5891F6DB1A000C3F49F /* Main.storyboard */,
 				7A44C58C1F6DB1A000C3F49F /* Assets.xcassets */,
 				7A44C58E1F6DB1A000C3F49F /* LaunchScreen.storyboard */,
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A4E349A1F6FB258007C4754 /* RegisterViewController.swift in Sources */,
+				7A1ACAE91F7318080055B7D3 /* RegisterSecurityQuesViewController.swift in Sources */,
+				7A4E349A1F6FB258007C4754 /* RegisterBasicInfoViewController.swift in Sources */,
 				7A44C5881F6DB1A000C3F49F /* LoginViewController.swift in Sources */,
+				7A1ACAE71F7317BA0055B7D3 /* RegisterBiometricsViewController.swift in Sources */,
 				7A44C5861F6DB1A000C3F49F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
