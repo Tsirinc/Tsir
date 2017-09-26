@@ -1,5 +1,5 @@
 //
-//  RegisterBiometricsViewController.swift
+//  RegisterConfirmationViewController.swift
 //  Tsir
 //
 //  Created by Trevor Bullock on 9/20/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterBiometricsViewController: UIViewController {
+class RegisterConfirmationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

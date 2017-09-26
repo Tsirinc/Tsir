@@ -13,8 +13,8 @@ class RegisterBasicInfoViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var emailAddressTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet var confirmPasswordTextField: UITextField!
+    
     
     
     override func viewDidLoad() {
