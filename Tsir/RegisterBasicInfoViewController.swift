@@ -13,7 +13,8 @@ class RegisterBasicInfoViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     
     
