@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -201,6 +200,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="rL9-ea-XeD" eventType="touchUpInside" id="iwZ-hs-YlZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bV-84-tM1">
                                         <rect key="frame" x="90" y="0.0" width="34" height="30"/>
@@ -225,11 +227,9 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="73c-sg-Yib" id="Ls4-up-9X3"/>
-                        <outlet property="emailAddressTextField" destination="k2r-cb-qCq" id="rIm-6u-ora"/>
                         <outlet property="firstNameTextField" destination="4FG-n1-GYE" id="O93-u8-dNF"/>
                         <outlet property="lastNameTextField" destination="Ja0-4d-xnN" id="owI-VK-Jwf"/>
                         <outlet property="passwordTextField" destination="fDf-UJ-bbK" id="O5Y-65-msj"/>
-                        <outlet property="phoneNumberTextField" destination="dBg-bh-eRj" id="fp3-62-Xh3"/>
                         <outlet property="usernameTextField" destination="Bb2-mg-8AE" id="Hap-eT-ao5"/>
                     </connections>
                 </viewController>
@@ -265,7 +265,7 @@
                                                 <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UHq-x9-mhH" userLabel="Confirm Email Stack View">
                                                 <rect key="frame" x="0.0" y="66.5" width="343" height="30"/>
@@ -301,7 +301,7 @@
                                                 <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-fA-O3A" userLabel="Confirm Phone Stack View">
                                                 <rect key="frame" x="0.0" y="66.5" width="343" height="30"/>
@@ -333,6 +333,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="A79-zG-AXz" eventType="touchUpInside" id="eyz-h8-0vM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-EO-aB9">
                                         <rect key="frame" x="76" y="0.0" width="34" height="30"/>
@@ -355,15 +358,19 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="emailTextField" destination="k2r-cb-qCq" id="h1N-Nh-Z3b"/>
+                        <outlet property="phoneTextField" destination="dBg-bh-eRj" id="wXX-0d-ibT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIQ-Lq-4yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5220" y="36"/>
         </scene>
-        <!--Register Security Ques View Controller-->
+        <!--Register Security Questions View Controller-->
         <scene sceneID="ghs-rH-UVv">
             <objects>
-                <viewController id="6P3-RN-TBc" customClass="RegisterSecurityQuesViewController" customModule="Tsir" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6P3-RN-TBc" customClass="RegisterSecurityQuestionsViewController" customModule="Tsir" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o78-V2-RVS"/>
                         <viewControllerLayoutGuide type="bottom" id="gq0-Ad-JZi"/>
@@ -446,6 +453,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="6P3-RN-TBc" eventType="touchUpInside" id="Xcu-VX-k0m"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5s-eU-0jZ">
                                         <rect key="frame" x="76" y="0.0" width="51" height="30"/>
@@ -464,6 +474,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="t5E-r4-J2X" secondAttribute="trailing" id="Z1Y-0D-1gS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="securityAnswer1" destination="JEt-bR-Qjk" id="CRW-EN-rQQ"/>
+                        <outlet property="securityAnswer2" destination="5DV-LT-tZL" id="C9K-Or-5Q2"/>
+                        <outlet property="securityAnswer3" destination="G3G-Pv-Bpe" id="zT7-FT-84g"/>
+                        <outlet property="securityQuestion1" destination="rGz-qr-VKD" id="cUf-7h-X13"/>
+                        <outlet property="securityQuestion2" destination="Mpc-Ux-vdI" id="N7o-AM-vXC"/>
+                        <outlet property="securityQuestion3" destination="WFk-Uu-Jlh" id="EiI-Rn-FuM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUO-E5-VDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

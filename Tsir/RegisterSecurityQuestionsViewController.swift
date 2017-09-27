@@ -1,5 +1,5 @@
 //
-//  RegisterConfirmationViewController.swift
+//  RegisterSecurityQuestionsViewController.swift
 //  Tsir
 //
 //  Created by Trevor Bullock on 9/20/17.
@@ -8,10 +8,14 @@
 
 import UIKit
 
-class RegisterConfirmationViewController: UIViewController {
+class RegisterSecurityQuestionsViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var securityQuestion1: UITextField!
+    @IBOutlet weak var securityAnswer1: UITextField!
+    @IBOutlet weak var securityQuestion2: UITextField!
+    @IBOutlet weak var securityAnswer2: UITextField!
+    @IBOutlet weak var securityQuestion3: UITextField!
+    @IBOutlet weak var securityAnswer3: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +46,7 @@ class RegisterConfirmationViewController: UIViewController {
             owningNavigationController.popViewController(animated: true)
         }
         else {
-            fatalError("The Register Confirmation View Controller is not within a Navigation Controller.")
+            fatalError("The Register Security Questions View Controller is not within a Naviagtion Controller.")
         }
     }
     
