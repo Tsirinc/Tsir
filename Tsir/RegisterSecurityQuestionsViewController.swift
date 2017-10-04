@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterSecurityQuestionsViewController: UIViewController {
+class RegisterSecurityQuestionsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var securityQuestion1: UITextField!
     @IBOutlet weak var securityAnswer1: UITextField!
@@ -30,12 +30,12 @@ class RegisterSecurityQuestionsViewController: UIViewController {
     
     //MARK: Naviation Bar hiding
     override func viewWillAppear(_ animated: Bool) {
-        super .viewWillAppear(animated)
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super .viewWillDisappear(animated)
+        super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
@@ -54,6 +54,21 @@ class RegisterSecurityQuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    //MARK: Private Methods
+    
+    private func getScreenSize() -> (height: CGFloat, width: CGFloat) {
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        return (screenHeight, screenWidth)
     }
 
 }
