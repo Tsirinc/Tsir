@@ -91,7 +91,7 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func keyboardFrameChangeNotification(_ notification: Notification) {
+    /*@objc func keyboardFrameChangeNotification(_ notification: Notification) {
         if let userInfo = notification.userInfo {
             let activeTextField = getActiveTextField()
             let endFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
@@ -111,34 +111,57 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
                     }, completion: nil)
             }
         }
+    }*/
+    
+    @objc func keyboardWillChange(_ notification: NSNotification) {
+        let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
+        let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let deltaY = targetFrame.origin.y - curFrame.origin.y
+        
+        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: curve), animations: {
+            self.view.frame.origin.y += deltaY
+            
+        },completion: {(true) in
+            self.view.layoutIfNeeded()
+        })
     }
     
-    /*@objc func keyboardWillChange(_ notification: NSNotification) {
-        let activeTextField = getActiveTextField()
-        //let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+    @objc func keyboardFrameChangeNotification(_ notification: NSNotification) {
+        let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
-        //let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let deltaY = targetFrame.origin.y - curFrame.origin.y
         
-        if activeTextField!.frame.intersects(targetFrame) {
-            let offsetY = targetFrame.minY - activeTextField!.frame.maxY
+        UIView.animate(withDuration: duration, delay: 0.0, options: UIViewAnimationOptions(rawValue: curve), animations: {
+            self.view.frame.origin.y += deltaY
             
-            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions(rawValue: curve), animations: {
-                self.view.frame.origin.y += offsetY
-            },completion: {(true) in
-                self.view.layoutIfNeeded()
-            })
-        }
-        //let deltaY = targetFrame.origin.y - curFrame.origin.y
-        
-
- }#*/
+        },completion: {(true) in
+            self.view.layoutIfNeeded()
+        })
+    }
     
     private func getActiveTextField() -> UITextField! {
         let textFields = [firstNameTextField, lastNameTextField, usernameTextField, passwordTextField, confirmPasswordTextField]
         for textField in textFields {
             if textField!.isFirstResponder {
-                print("\(textField!.description) is first responder.")
+                switch textField! {
+                case firstNameTextField:
+                    print("First Name")
+                case lastNameTextField:
+                    print("Last name")
+                case usernameTextField:
+                    print("Username")
+                case passwordTextField:
+                    print("Password")
+                case confirmPasswordTextField:
+                    print("Confirm password")
+                default:
+                    print("Not in a defined text field")
+                }
+                
                 return textField
             }
         }
