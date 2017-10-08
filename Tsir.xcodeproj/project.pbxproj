@@ -215,6 +215,7 @@
 					};
 					7A44C5A01F6DB1A000C3F49F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 23FY7M4A84;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7A44C5811F6DB1A000C3F49F;
@@ -493,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23FY7M4A84;
 				INFOPLIST_FILE = TsirTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TsirTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23FY7M4A84;
 				INFOPLIST_FILE = TsirTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TsirTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -530,8 +533,9 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23FY7M4A84;
 				INFOPLIST_FILE = TsirUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TsirUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,8 +553,9 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23FY7M4A84;
 				INFOPLIST_FILE = TsirUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TsirUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

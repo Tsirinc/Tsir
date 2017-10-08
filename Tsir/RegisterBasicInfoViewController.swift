@@ -18,8 +18,8 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    //@IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint?
-    var offsetY: CGFloat = 0
+    @IBOutlet weak var nextButton: UIButton!
+    var keyboardOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,31 +31,39 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         
+        //Add keyboard observer
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardFrameChangeNotification(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Naviation Bar hiding
+    //MARK: View
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //Hide navigation bar
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        //Unhide navigation bar
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        //Remove keyboard observer
+        NotificationCenter.default.removeObserver(self)
     }
 
     
     // MARK: - Navigation
     
     @IBAction func cancel(_ sender: UIButton) {
-        if let owningNavigationController = navigationController{
+        if let owningNavigationController = navigationController {
             owningNavigationController.popViewController(animated: true)
         }
         else {
@@ -83,86 +91,54 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Private Methods
     
-    private func updateSubmitButtonState() {
-        
+    private func updateNextButtonState() {
+            nextButton.isEnabled = textFieldsAreFilled() && isUniqueUsername() && areValidPasswordFields()
     }
     
-    private func moveView(view: UIView, moveDistance: Int, up: Bool) {
-        
+    //Returns true if all text fields in this view controller have text inside them
+    private func textFieldsAreFilled() -> Bool {
+        return firstNameTextField.hasText && lastNameTextField.hasText && usernameTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText
     }
     
-    /*@objc func keyboardFrameChangeNotification(_ notification: Notification) {
-        if let userInfo = notification.userInfo {
-            let activeTextField = getActiveTextField()
-            let endFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
-            let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0
-            let animationCurveRawValue = (userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int) ?? Int(UIViewAnimationOptions.curveEaseInOut.rawValue)
-            let animationCurve = UIViewAnimationOptions(rawValue: UInt(animationCurveRawValue))
-            if let _ = endFrame, endFrame!.intersects(activeTextField!.frame) {
-                self.offsetY = activeTextField!.frame.maxY - endFrame!.minY
-                UIView.animate(withDuration: animationDuration, delay: TimeInterval(0), options: animationCurve, animations: {
-                    self.view.frame.origin.y = self.view.frame.origin.y - self.offsetY
-                }, completion: nil)
-            }
-            else if self.offsetY != 0 {
-                    UIView.animate(withDuration: animationDuration, delay: TimeInterval(0), options: animationCurve, animations: {
-                        self.view.frame.origin.y = self.view.frame.origin.y + self.offsetY
-                        self.offsetY = 0
-                    }, completion: nil)
-            }
-        }
-    }*/
+    private func isUniqueUsername() -> Bool {
+        return true
+    }
     
-    @objc func keyboardWillChange(_ notification: NSNotification) {
-        let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
-        let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
-        let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let deltaY = targetFrame.origin.y - curFrame.origin.y
-        
-        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: curve), animations: {
-            self.view.frame.origin.y += deltaY
-            
-        },completion: {(true) in
-            self.view.layoutIfNeeded()
-        })
+    private func areValidPasswordFields() -> Bool {
+        return true
     }
     
     @objc func keyboardFrameChangeNotification(_ notification: NSNotification) {
         let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
-        let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let deltaY = targetFrame.origin.y - curFrame.origin.y
+        let activeTextField = getActiveTextField()
         
-        UIView.animate(withDuration: duration, delay: 0.0, options: UIViewAnimationOptions(rawValue: curve), animations: {
-            self.view.frame.origin.y += deltaY
-            
-        },completion: {(true) in
-            self.view.layoutIfNeeded()
-        })
+        if(keyboardOffset == 0) {
+            let textFieldFrame = activeTextField!.superview!.convert(activeTextField!.frame, to: self.view)
+            if(targetFrame.minY < textFieldFrame.maxY) {
+                keyboardOffset = textFieldFrame.maxY - targetFrame.minY
+                UIView.animate(withDuration: duration, delay: TimeInterval(0), options: UIViewAnimationOptions(rawValue: curve), animations: {
+                    self.view.frame.origin.y -= self.keyboardOffset
+                }, completion: {(true) in
+                    self.view.layoutIfNeeded()
+                })
+            }
+        } else {
+            UIView.animate(withDuration: duration, delay: TimeInterval(0), options: UIViewAnimationOptions(rawValue: curve), animations: {
+                self.view.frame.origin.y += self.keyboardOffset
+            }, completion: {(true) in
+                self.view.layoutIfNeeded()
+            })
+            keyboardOffset = 0
+        }
     }
     
     private func getActiveTextField() -> UITextField! {
         let textFields = [firstNameTextField, lastNameTextField, usernameTextField, passwordTextField, confirmPasswordTextField]
         for textField in textFields {
             if textField!.isFirstResponder {
-                switch textField! {
-                case firstNameTextField:
-                    print("First Name")
-                case lastNameTextField:
-                    print("Last name")
-                case usernameTextField:
-                    print("Username")
-                case passwordTextField:
-                    print("Password")
-                case confirmPasswordTextField:
-                    print("Confirm password")
-                default:
-                    print("Not in a defined text field")
-                }
-                
-                return textField
+                return textField!
             }
         }
         
