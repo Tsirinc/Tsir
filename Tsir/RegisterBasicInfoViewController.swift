@@ -33,6 +33,8 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
         
         //Add keyboard observer
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardFrameChangeNotification(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        updateNextButtonState()
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,9 +86,8 @@ class RegisterBasicInfoViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        //activeTextField = textField
-        return true
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateNextButtonState()
     }
     
     //MARK: Private Methods
