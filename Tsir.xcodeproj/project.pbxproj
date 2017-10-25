@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76F95B99745514C75A265B39 /* Pods_TsirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FE8792CB63F4A93A5033DC /* Pods_TsirUITests.framework */; };
 		7A1ACAE71F7317BA0055B7D3 /* RegisterConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1ACAE61F7317BA0055B7D3 /* RegisterConfirmViewController.swift */; };
 		7A1ACAE91F7318080055B7D3 /* RegisterSecurityQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1ACAE81F7318080055B7D3 /* RegisterSecurityQuestionsViewController.swift */; };
 		7A44C5861F6DB1A000C3F49F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C5851F6DB1A000C3F49F /* AppDelegate.swift */; };
@@ -17,6 +18,8 @@
 		7A44C59B1F6DB1A000C3F49F /* TsirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C59A1F6DB1A000C3F49F /* TsirTests.swift */; };
 		7A44C5A61F6DB1A000C3F49F /* TsirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44C5A51F6DB1A000C3F49F /* TsirUITests.swift */; };
 		7A4E349A1F6FB258007C4754 /* RegisterBasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E34991F6FB258007C4754 /* RegisterBasicInfoViewController.swift */; };
+		92503E72AAB40AEB098BDA0A /* Pods_TsirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FB665590655C537B6FC7BB /* Pods_TsirTests.framework */; };
+		E798036619CDF4C16B67A3BD /* Pods_Tsir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C69B7F2CCC0B48C5D2F4401 /* Pods_Tsir.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13A2B9CA1FA037720014AE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		159C22E0BEC3858E4D37914E /* Pods-Tsir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tsir.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tsir/Pods-Tsir.release.xcconfig"; sourceTree = "<group>"; };
+		1A31B1BFB86E15A3C57DE1D7 /* Pods-Tsir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tsir.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tsir/Pods-Tsir.debug.xcconfig"; sourceTree = "<group>"; };
+		49ACE04723642DDA5A7337E0 /* Pods-TsirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsirUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsirUITests/Pods-TsirUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		64FE8792CB63F4A93A5033DC /* Pods_TsirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1ACAE61F7317BA0055B7D3 /* RegisterConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterConfirmViewController.swift; sourceTree = "<group>"; };
 		7A1ACAE81F7318080055B7D3 /* RegisterSecurityQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterSecurityQuestionsViewController.swift; sourceTree = "<group>"; };
 		7A44C5821F6DB1A000C3F49F /* Tsir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsir.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,11 @@
 		7A44C5A51F6DB1A000C3F49F /* TsirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsirUITests.swift; sourceTree = "<group>"; };
 		7A44C5A71F6DB1A000C3F49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4E34991F6FB258007C4754 /* RegisterBasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBasicInfoViewController.swift; sourceTree = "<group>"; };
+		85B3CAA1B46FDC51E9AFA6FD /* Pods-TsirTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsirTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsirTests/Pods-TsirTests.release.xcconfig"; sourceTree = "<group>"; };
+		89FB665590655C537B6FC7BB /* Pods_TsirTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsirTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C69B7F2CCC0B48C5D2F4401 /* Pods_Tsir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tsir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB938F55115C33D7FF409FA /* Pods-TsirUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsirUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsirUITests/Pods-TsirUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EE266E0AEE02F0066243FC2B /* Pods-TsirTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsirTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsirTests/Pods-TsirTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E798036619CDF4C16B67A3BD /* Pods_Tsir.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92503E72AAB40AEB098BDA0A /* Pods_TsirTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +89,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F95B99745514C75A265B39 /* Pods_TsirUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6132CAE14CF43D449E29CA15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C69B7F2CCC0B48C5D2F4401 /* Pods_Tsir.framework */,
+				89FB665590655C537B6FC7BB /* Pods_TsirTests.framework */,
+				64FE8792CB63F4A93A5033DC /* Pods_TsirUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A44C5791F6DB1A000C3F49F = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +113,8 @@
 				7A44C5991F6DB1A000C3F49F /* TsirTests */,
 				7A44C5A41F6DB1A000C3F49F /* TsirUITests */,
 				7A44C5831F6DB1A000C3F49F /* Products */,
+				E2A2F094D19C01DA34819C17 /* Pods */,
+				6132CAE14CF43D449E29CA15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +140,7 @@
 				7A44C58C1F6DB1A000C3F49F /* Assets.xcassets */,
 				7A44C58E1F6DB1A000C3F49F /* LaunchScreen.storyboard */,
 				7A44C5911F6DB1A000C3F49F /* Info.plist */,
+				13A2B9CA1FA037720014AE5F /* GoogleService-Info.plist */,
 			);
 			path = Tsir;
 			sourceTree = "<group>";
@@ -134,6 +163,19 @@
 			path = TsirUITests;
 			sourceTree = "<group>";
 		};
+		E2A2F094D19C01DA34819C17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A31B1BFB86E15A3C57DE1D7 /* Pods-Tsir.debug.xcconfig */,
+				159C22E0BEC3858E4D37914E /* Pods-Tsir.release.xcconfig */,
+				EE266E0AEE02F0066243FC2B /* Pods-TsirTests.debug.xcconfig */,
+				85B3CAA1B46FDC51E9AFA6FD /* Pods-TsirTests.release.xcconfig */,
+				49ACE04723642DDA5A7337E0 /* Pods-TsirUITests.debug.xcconfig */,
+				EBB938F55115C33D7FF409FA /* Pods-TsirUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A44C5AA1F6DB1A000C3F49F /* Build configuration list for PBXNativeTarget "Tsir" */;
 			buildPhases = (
+				4F2FCD4B6DCAC5D73AA3E036 /* [CP] Check Pods Manifest.lock */,
 				7A44C57E1F6DB1A000C3F49F /* Sources */,
 				7A44C57F1F6DB1A000C3F49F /* Frameworks */,
 				7A44C5801F6DB1A000C3F49F /* Resources */,
+				2D854A54DE425D51EFC82C79 /* [CP] Embed Pods Frameworks */,
+				507EA810DF418E7178FA309F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A44C5AD1F6DB1A000C3F49F /* Build configuration list for PBXNativeTarget "TsirTests" */;
 			buildPhases = (
+				EE51D725B6169466A99E7470 /* [CP] Check Pods Manifest.lock */,
 				7A44C5921F6DB1A000C3F49F /* Sources */,
 				7A44C5931F6DB1A000C3F49F /* Frameworks */,
 				7A44C5941F6DB1A000C3F49F /* Resources */,
+				7441DAADA7BA4EE9E8C69DAE /* [CP] Embed Pods Frameworks */,
+				B3FF9292EDDB8351F5CB31BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A44C5B01F6DB1A000C3F49F /* Build configuration list for PBXNativeTarget "TsirUITests" */;
 			buildPhases = (
+				8AEFE36A623A5E868FAB9509 /* [CP] Check Pods Manifest.lock */,
 				7A44C59D1F6DB1A000C3F49F /* Sources */,
 				7A44C59E1F6DB1A000C3F49F /* Frameworks */,
 				7A44C59F1F6DB1A000C3F49F /* Resources */,
+				5FA0AB896ECB14A8F82AB8C3 /* [CP] Embed Pods Frameworks */,
+				9466929798129AF31330BE7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,7 +266,6 @@
 					};
 					7A44C5A01F6DB1A000C3F49F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 23FY7M4A84;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7A44C5811F6DB1A000C3F49F;
@@ -268,6 +318,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D854A54DE425D51EFC82C79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tsir/Pods-Tsir-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tsir/Pods-Tsir-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2FCD4B6DCAC5D73AA3E036 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tsir-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507EA810DF418E7178FA309F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tsir/Pods-Tsir-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA0AB896ECB14A8F82AB8C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TsirUITests/Pods-TsirUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7441DAADA7BA4EE9E8C69DAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TsirTests/Pods-TsirTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AEFE36A623A5E868FAB9509 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TsirUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9466929798129AF31330BE7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TsirUITests/Pods-TsirUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3FF9292EDDB8351F5CB31BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TsirTests/Pods-TsirTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE51D725B6169466A99E7470 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TsirTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A44C57E1F6DB1A000C3F49F /* Sources */ = {
@@ -445,6 +647,7 @@
 		};
 		7A44C5AB1F6DB1A000C3F49F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A31B1BFB86E15A3C57DE1D7 /* Pods-Tsir.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -465,6 +668,7 @@
 		};
 		7A44C5AC1F6DB1A000C3F49F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 159C22E0BEC3858E4D37914E /* Pods-Tsir.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -486,6 +690,7 @@
 		};
 		7A44C5AE1F6DB1A000C3F49F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE266E0AEE02F0066243FC2B /* Pods-TsirTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +712,7 @@
 		};
 		7A44C5AF1F6DB1A000C3F49F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85B3CAA1B46FDC51E9AFA6FD /* Pods-TsirTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,12 +734,13 @@
 		};
 		7A44C5B11F6DB1A000C3F49F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49ACE04723642DDA5A7337E0 /* Pods-TsirUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23FY7M4A84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TsirUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -548,12 +755,13 @@
 		};
 		7A44C5B21F6DB1A000C3F49F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB938F55115C33D7FF409FA /* Pods-TsirUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23FY7M4A84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TsirUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
